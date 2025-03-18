@@ -421,19 +421,27 @@ def main():
         if target is None:
                 print(f'{argument.ip} is not alive')
                 sys.exit()
-          
+                  
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M %p %Z")
         script_name = os.path.basename(__file__)  # Gets the filename
         print(f"\nStarting {script_name} 1.0 at {current_time}")
-        print(f'\n{len(target)} alive host found')
-        
-
         if argument.output:
-                f = open(argument.output,'w',encoding="utf-8")
+                f = open(argument.output,'a',encoding="utf-8")
                 f.write(f"\nStarting {os.path.basename(__file__)} 1.0 at {datetime.now().strftime("%Y-%m-%d %H:%M %p %Z")}")
                 f.write(f'\n{len(target)} alive host found')
                 f.close()
+        
+        print(f'\n{len(target)} alive host found')
+        if target is not None and argument.verbose:
+                    for t in target:
+                         if argument.output:
+                             f = open(argument.output,'a',encoding="utf-8")
+                             f.write(f"\n{t}")
+                             f.close()
+                         
+                         print(t)
 
+        
                 
                 
         
@@ -455,6 +463,3 @@ def main():
 
 if __name__ == "__main__":
         main()
-         
-         
-         
