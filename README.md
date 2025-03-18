@@ -96,8 +96,6 @@ Scanning Target: 192.168.1.1
 +------+----------+--------+---------+-------------------------------+
 ```
 
-## Video guide :
-video is here:
 ## Authors
 
 - [@sulabh915](https://github.com/sulabh915/)
