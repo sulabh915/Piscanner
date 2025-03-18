@@ -19,7 +19,7 @@ class Documentation_options:
                         parser = ArgumentParser(
                         description="Python Advance Port Scanner",
                         usage="python3 %(prog)s 192.168.1.1",
-                        epilog="Example Usage: python3 %(prog)s -tT -s 10 -e 100 -th 300 -sd -b -v scanme.nmap.org"
+                        epilog="Example Usage: python3 %(prog)s -tT -sp 22 -th 300 -sd -b -v scanme.nmap.org"
                         )
 
                         # Required positional argument: Target (IP, CIDR range, or domain)
