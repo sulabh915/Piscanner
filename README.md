@@ -36,6 +36,7 @@ Step by step guide for installation :
 git clone https://github.com/sulabh915/piscanner.git
 cd piscanner
 pip install -r requirement.txt
+chmod +x piscanner.py
 python3 piscanner.py -h
 ```
 ## Usage/Examples      :
